@@ -2,43 +2,100 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 
+  <!-- displays site properly based on user's device -->
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
   <title>Frontend Mentor | Tip calculator app</title>
-
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" href="css/style.css">
+  <!-- tailwind css framework added -->
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <!-- Font awesome -->
+  <script src="https://kit.fontawesome.com/cfd69f1693.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
-  Bill
+  <section class="w-5/6 mx-auto my-auto rounded">
+    <h1 class="text-center mt-16 tracking-widest">SPLI <br> TTER</h1>
+    <article class=" w-2/4 mx-auto my-8 bg-white grid grid-cols-2 gap-4 container-box">
 
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
+      <div class="p-8 w-75">
+        <h2 class="my-2">Bill</h2>
+        <div class="bg-gray-100 w-full rounded flex py-2">
+          <i class="fas fa-dollar-sign px-4 py-2 text-gray-400"></i>
+          <input class="w-full bg-gray-100 text-right pr-4 rounded focus:outline-none" type="text" placeholder="0.00">
+        </div>
+        <div class="my-8">
+           <h2 class="my-2">Select Tip %</h2>
+           <div class="grid grid-cols-3 gap-4">
+            <div class="">
+              <button class="btn text-center w-full py-2 text-xl font-bold text-white rounded">5%</button>
+            </div>
+            <div class="">
+              <button class="btn text-center w-full py-2 text-xl font-bold text-white rounded">10%</button>
+            </div>
+            <div class="">
+              <button class="btn-light text-center w-full py-2 text-xl font-bold text-gray-700 rounded">15%</button>
+            </div>
+            <div class="">
+              <button class="btn text-center w-full py-2 text-xl font-bold text-white rounded">25%</button>
+            </div>
+            <div class="">
+              <button class="btn text-center w-full py-2 text-xl font-bold text-white rounded">50%</button>
+            </div>
+            <div class="">
+              <button class="bg-gray-100 custom text-gray-500 text-center w-full py-2 text-xl font-bold rounded">Custom</button>
+            </div>
+           
+          </div>
+        </div>
 
-  Number of People
+        <div>
+          <h2 class="my-2">Numbers of People</h2>
+          <div class="bg-gray-100 w-full rounded flex py-2">
+            <i class="fas fa-user-alt px-4 py-2 text-gray-400"></i>
+            <input class="w-full bg-gray-100 text-right pr-4 rounded focus:outline-none" type="text" placeholder="1 or More">
+          </div>
+        </div>
+      </div>
 
-  Tip Amount
-  / person
+<!-- 2nd part -->
 
-  Total
-  / person
+      <div class="p-8 w-75">
+        <div class="background w-full h-full container-box">
+          <div class="flex p-8">
+            <div>
+            <h2 class="text-white font-bold text-xl">Tip Amount</h2>
+            <p class="text-gray-400 font-semibold">/ person</p>
+            </div> 
 
-  Reset
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+            <div class="ml-auto">
+              <i class="fas fa-dollar-sign px-4 amount inline"> <h1 class="inline amount">0.00</h1></i>
+            </div>
+          </div>
+
+
+          <div class="flex p-8">
+            <div>
+            <h2 class="text-white font-bold text-xl">Total</h2>
+            <p class="text-gray-400 font-semibold">/ person</p>
+            </div>
+
+            <div class="ml-auto">
+              <i class="fas fa-dollar-sign px-4 amount inline"> <h1 class="inline  amount">0.00</h1></i>
+            </div>
+          </div>
+
+          <div class="p-8 text-center">
+            <button class="text-center btn-light w-full px-4 py-2 rounded text-xl font-semibold" type="reset">Reset</button>
+          </div>
+
+        </div>
+
+      </div>
+    </article>
+  </section>
+
 </body>
 </html>
